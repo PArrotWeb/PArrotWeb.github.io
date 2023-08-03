@@ -1,0 +1,197 @@
+@import 'style.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: rgba($white, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  border-bottom: $light-grey 1px solid;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.header__open-btn {
+  display: none;
+}
+
+.header__open-img {
+}
+
+.header__nav {
+  font-family: $nunito-medium;
+  font-size: 18px;
+  color: $black;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 28px;
+}
+
+.header__nav-item {
+  flex-shrink: 0;
+}
+
+.header__nav-item-link {
+}
+
+.header__links {
+  display: flex;
+  gap: 28px;
+}
+
+.header__links-item {
+}
+
+.header__links-item-img {
+  max-height: 28px;
+  max-width: 28px;
+  object-fit: cover;
+}
+
+.main {
+  position: relative;
+}
+
+.main::after {
+  content: '';
+  position: absolute;
+  height: 150vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  $dotSize: 24px;
+  background-color: $white;
+  background-image: url('../img/DotPattern.png');
+  background-repeat: repeat;
+  background-position: center;
+  background-size: $dotSize;
+  z-index: -1;
+  clip-path: polygon(0 0, 100vw 0, 100vw 100vh, 0 150vh);
+}
+
+.home {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  $width: 337.135px;
+  $height: 332.253px;
+  top: calc($height / -3);
+  left: calc($width / -2.45);
+  width: $width;
+  height: $height;
+  transform: rotate(-172deg);
+  background-image: url('../img/Blob.svg');
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.home::after {
+  content: '';
+  position: absolute;
+  $width: 337.135px;
+  $height: 332.253px;
+  bottom: 0;
+  right: calc($width / -1.45);
+  width: $width;
+  height: $height;
+  transform: rotate(-172.467deg);
+  background-image: url('../img/Blob.svg');
+  background-size: cover;
+  background-position: center;
+  // исправить точки
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.home__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home__title {
+  position: relative;
+}
+
+.home__title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 110px;
+  max-height: 51px;
+  top: 16px;
+  left: 104px;
+  background-image: url('../img/home/Arrow (1).svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.about {
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__content {
+  height: 100%;
+}
+
+.about__title {
+  margin-bottom: 40px;
+}
+
+.about__block {
+  max-width: 720px;
+  min-height: 320px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 28px;
+  border: 3px solid $black;
+  background: $white;
+  margin-bottom: 40px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.about__block::before {
+  content: '';
+  position: absolute;
+  top: -56px;
+  left: -124px;
+  background-image: url('../img/about/People.svg');
+  background-size: cover;
+  background-position: center;
+  width: 155.173px;
+  height: 428.236px;
+  transform: translateZ(-1px);
+}
+
+.about__text {
+  color: $black;
+  text-align: justify;
+  font-family: $nunito-regular;
+  font-size: 18px;
+}

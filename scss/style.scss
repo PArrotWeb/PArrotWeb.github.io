@@ -1,0 +1,157 @@
+@import '../css/reset.min.css';
+
+@font-face {
+  font-family: 'nunito-regular';
+  src: url('../fonts/Nunito-Regular.woff2') format('woff2'),
+  url('../fonts/Nunito-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nunito-medium';
+  src: url('../fonts/Nunito-Medium.woff2') format('woff2'),
+  url('../fonts/Nunito-Medium.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nunito-bold';
+  src: url('../fonts/Nunito-Bold.woff2') format('woff2'),
+  url('../fonts/Nunito-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$nunito-regular: 'nunito-regular', sans-serif;
+$nunito-medium: 'nunito-medium', sans-serif;
+$nunito-bold: 'nunito-bold', sans-serif;
+
+$white: #fff;
+$black: #141414;
+$light-grey: #d8d8d8;
+$red: #fa0008;
+
+* {
+  line-height: normal;
+}
+
+::selection {
+  color: $white;
+  background-color: $black;
+}
+
+/* Работает в Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: rgba(68, 74, 74, 0.225) transparent;
+}
+
+/* Работает в Chrome, Edge и Safari */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px 0 0 15px;
+  background-color: rgba(68, 74, 74, 0.225);
+}
+
+body {
+  overflow-x: hidden;
+  color: $black;
+}
+
+.container {
+  max-width: 1396px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.btn {
+  display: inline-block;
+}
+
+h1 {
+  font-family: $nunito-bold;
+  font-size: 56px;
+  letter-spacing: 1.12px;
+}
+
+h1 > highlight {
+  color: $red;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: $nunito-medium;
+  font-size: 36px;
+  letter-spacing: 1.8px;
+
+}
+
+h2 > highlight {
+  font-size: 56px;
+}
+
+p {
+  font-family: $nunito-regular;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+a, button {
+  color: $black;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+button:hover, a:hover {
+  color: $black;
+  opacity: 0.75;
+}
+
+button:focus-visible, a:focus-visible {
+  color: $black;
+  outline: $black 3px solid;
+  outline-offset: -3px;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  position: absolute;
+  top: 1em;
+  right: -100%;
+  height: 32px;
+  padding: 8px 8px 8px 8px;
+  content: attr(data-tooltip);
+  font-family: $nunito-regular;
+  font-size: 12px;
+  color: $black;
+  transition: 0.2s;
+  pointer-events: none;
+  opacity: 0;
+  border: 2px solid $black;
+  border-radius: 8px;
+  background: $white;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+[data-tooltip]:hover::after {
+  top: 3em; /* Положение подсказки */
+  opacity: 1 !important;
+}
