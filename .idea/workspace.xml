@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="153c3818-4bf2-47d8-96b8-82a2d1a7624d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/Nunito-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/Nunito-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/Nunito-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/Nunito-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/Nunito-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/Nunito-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ParrotWebLogo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/jquery-3.6.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/slick.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+    <list default="true" id="153c3818-4bf2-47d8-96b8-82a2d1a7624d" name="Changes" comment="Header, Home, About">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +80,18 @@
       <workItem from="1690957178047" duration="8650000" />
       <workItem from="1690977539852" duration="1807000" />
       <workItem from="1691037427162" duration="10424000" />
-      <workItem from="1691054836422" duration="10903000" />
+      <workItem from="1691054836422" duration="12264000" />
+      <workItem from="1691121778518" duration="4628000" />
     </task>
+    <task id="LOCAL-00001" summary="Header, Home, About">
+      <option name="closed" value="true" />
+      <created>1691072666533</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691072666533</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,5 +100,9 @@
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="executable:docker" />
     <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Header, Home, About" />
+    <option name="LAST_COMMIT_MESSAGE" value="Header, Home, About" />
   </component>
 </project>

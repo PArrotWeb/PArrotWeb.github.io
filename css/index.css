@@ -211,10 +211,10 @@ button:focus-visible, a:focus-visible {
 .home {
   position: relative;
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
 }
 
-.home::before {
+.home::after {
   content: "";
   position: absolute;
   top: -110.751px;
@@ -225,11 +225,11 @@ button:focus-visible, a:focus-visible {
   background-image: url("../img/Blob.svg");
   background-size: cover;
   background-position: center;
-  z-index: 2;
   opacity: 0.5;
+  z-index: -1;
 }
 
-.home::after {
+.home::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -240,7 +240,7 @@ button:focus-visible, a:focus-visible {
   background-image: url("../img/Blob.svg");
   background-size: cover;
   background-position: center;
-  z-index: 2;
+  z-index: -1;
   opacity: 0.5;
 }
 
@@ -249,6 +249,7 @@ button:focus-visible, a:focus-visible {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  z-index: 5;
 }
 
 .home__title {
@@ -319,6 +320,105 @@ button:focus-visible, a:focus-visible {
   text-align: justify;
   font-family: "nunito-regular", sans-serif;
   font-size: 18px;
+}
+
+.soft {
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.soft__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.soft__title {
+  margin-bottom: 40px;
+}
+
+.soft__block {
+  display: flex;
+  justify-content: center;
+  margin-left: 360px;
+}
+
+.soft__vertical {
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #141414;
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.soft__vertical::before {
+  content: "";
+  position: absolute;
+  top: -4.5px;
+  left: -4.5px;
+  width: 12px;
+  height: 12px;
+  background-color: #141414;
+  border-radius: 50%;
+  line-height: 0;
+  letter-spacing: 0;
+}
+
+.soft__vertical::after {
+  content: "";
+  position: absolute;
+  bottom: -4.5px;
+  left: -4.5px;
+  width: 12px;
+  height: 12px;
+  background-color: #141414;
+  border-radius: 50%;
+  line-height: 0;
+  letter-spacing: 0;
+}
+
+.soft__block-list {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.soft__block-item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.soft__block-item-line {
+  width: 28px;
+  height: 3px;
+  background-color: #141414;
+  flex-shrink: 0;
+}
+
+.soft__block-item-content {
+  flex-shrink: 0;
+  padding: 0 16px;
+  height: 48px;
+  text-transform: uppercase;
+  font-family: "nunito-medium", sans-serif;
+  font-size: 12px;
+  line-height: 42px;
+  letter-spacing: 1.75px;
+  color: #141414;
+  border: 3px solid #141414;
+  border-radius: 6px;
+}
+
+.soft__block-item:nth-child(odd) {
+  transform: translateX(-100%) scaleX(-1);
+}
+
+.soft__block-item:nth-child(odd) .soft__block-item-content {
+  transform: scaleX(-1);
 }
 
 /*# sourceMappingURL=index.css.map */
