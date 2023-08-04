@@ -2,13 +2,15 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/scripts/index.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/main.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/scrollSpeed.min.js" />
         <item url="file://$PROJECT_DIR$/scripts/slick.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/scripts/slick.min.js" />
       <root url="file://$PROJECT_DIR$/scripts/main.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/scrollSpeed.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/slick.min.js" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

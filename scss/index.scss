@@ -2,19 +2,19 @@
 
 .header {
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100vw;
+  border-bottom: $light-grey 1px solid;
   background-color: rgba($white, 0.65);
   backdrop-filter: blur(8px);
-  z-index: 9999;
-  border-bottom: $light-grey 1px solid;
 }
 
 .header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 64px;
 }
 
@@ -52,8 +52,8 @@
 }
 
 .header__links-item-img {
-  max-height: 28px;
   max-width: 28px;
+  max-height: 28px;
   object-fit: cover;
 }
 
@@ -62,68 +62,68 @@
 }
 
 .main::after {
-  content: '';
   position: absolute;
-  height: 150vh;
-  width: 100vw;
+  z-index: -1;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 150vh;
   $dotSize: 24px;
+  content: '';
   background-color: $white;
   background-image: url('../img/DotPattern.png');
   background-repeat: repeat;
   background-position: center;
   background-size: $dotSize;
-  z-index: -1;
   clip-path: polygon(0 0, 100vw 0, 100vw 100vh, 0 150vh);
 }
 
 .home {
   position: relative;
-  overflow: hidden;
   z-index: 2;
+  overflow: hidden;
 }
 
 .home::after {
-  content: '';
   position: absolute;
+  z-index: -1;
   $width: 337.135px;
   $height: 332.253px;
   top: calc($height / -3);
   left: calc($width / -2.45);
   width: $width;
   height: $height;
+  content: '';
   transform: rotate(-172deg);
-  background-image: url('../img/Blob.svg');
-  background-size: cover;
-  background-position: center;
   opacity: 0.5;
-  z-index: -1;
+  background-image: url('../img/Blob.svg');
+  background-position: center;
+  background-size: cover;
 }
 
 .home::before {
-  content: '';
   position: absolute;
+  z-index: -1;
   $width: 337.135px;
   $height: 332.253px;
-  bottom: 0;
   right: calc($width / -1.45);
+  bottom: 0;
   width: $width;
   height: $height;
+  content: '';
   transform: rotate(-172.467deg);
-  background-image: url('../img/Blob.svg');
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
   opacity: 0.5;
+  background-image: url('../img/Blob.svg');
+  background-position: center;
+  background-size: cover;
 }
 
 .home__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .home__title {
@@ -131,17 +131,17 @@
 }
 
 .home__title::after {
-  content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
-  max-width: 110px;
-  max-height: 51px;
   top: 16px;
   left: 104px;
+  width: 100%;
+  max-width: 110px;
+  height: 100%;
+  max-height: 51px;
+  content: '';
   background-image: url('../img/home/Arrow (1).svg');
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .about {
@@ -151,8 +151,8 @@
 
 .about__container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 .about__content {
@@ -164,36 +164,36 @@
 }
 
 .about__block {
+  position: relative;
+  width: 100%;
   max-width: 720px;
   min-height: 320px;
-  width: 100%;
-  border-radius: 16px;
+  margin-bottom: 40px;
   padding: 28px;
   border: 3px solid $black;
+  border-radius: 16px;
   background: $white;
-  margin-bottom: 40px;
-  position: relative;
   transform-style: preserve-3d;
 }
 
 .about__block::before {
-  content: '';
   position: absolute;
   top: -56px;
   left: -124px;
-  background-image: url('../img/about/People.svg');
-  background-size: cover;
-  background-position: center;
   width: 155.173px;
   height: 428.236px;
+  content: '';
   transform: translateZ(-1px);
+  background-image: url('../img/about/People.svg');
+  background-position: center;
+  background-size: cover;
 }
 
 .about__text {
-  color: $black;
-  text-align: justify;
   font-family: $nunito-regular;
   font-size: 18px;
+  text-align: justify;
+  color: $black;
 }
 
 .soft {
@@ -203,8 +203,8 @@
 
 .soft__container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 .soft__title {
@@ -218,45 +218,45 @@
 }
 
 .soft__vertical {
+  position: relative;
   top: 0;
   bottom: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
   width: 3px;
   background-color: $black;
-  position: relative;
-  flex-shrink: 0;
-  flex-grow: 0;
 }
 
 .soft__vertical::before {
-  content: '';
+  line-height: 0;
   position: absolute;
   top: -4.5px;
   left: -4.5px;
   width: 12px;
   height: 12px;
-  background-color: $black;
-  border-radius: 50%;
-  line-height: 0;
+  content: '';
   letter-spacing: 0;
+  border-radius: 50%;
+  background-color: $black;
 }
 
 .soft__vertical::after {
-  content: '';
+  line-height: 0;
   position: absolute;
   bottom: -4.5px;
   left: -4.5px;
   width: 12px;
   height: 12px;
-  background-color: $black;
-  border-radius: 50%;
-  line-height: 0;
+  content: '';
   letter-spacing: 0;
+  border-radius: 50%;
+  background-color: $black;
 }
 
 .soft__block-list {
-  margin: 24px 0;
   display: flex;
   flex-direction: column;
+  margin: 24px 0;
   gap: 24px;
 }
 
@@ -267,21 +267,21 @@
 }
 
 .soft__block-item-line {
+  flex-shrink: 0;
   width: 28px;
   height: 3px;
   background-color: $black;
-  flex-shrink: 0;
 }
 
 .soft__block-item-content {
-  flex-shrink: 0;
-  padding: 0 16px;
-  height: 48px;
-  text-transform: uppercase;
   font-family: $nunito-medium;
   font-size: 12px;
   line-height: 42px;
+  flex-shrink: 0;
+  height: 48px;
+  padding: 0 16px;
   letter-spacing: 1.75px;
+  text-transform: uppercase;
   color: $black;
   border: 3px solid $black;
   border-radius: 6px;
@@ -294,3 +294,190 @@
 .soft__block-item:nth-child(odd) .soft__block-item-content {
   transform: scaleX(-1);
 }
+
+.hard {
+  padding: 80px 0;
+}
+
+.hard__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hard__title {
+  margin-bottom: 40px;
+}
+
+.hard__block {
+  display: flex;
+}
+
+.hard__vertical {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 3px;
+  background-color: $black;
+}
+
+.hard__vertical::before {
+  line-height: 0;
+  position: absolute;
+  top: -4.5px;
+  left: -4.5px;
+  width: 12px;
+  height: 12px;
+  content: '';
+  letter-spacing: 0;
+  border-radius: 50%;
+  background-color: $black;
+}
+
+.hard__vertical::after {
+  line-height: 0;
+  position: absolute;
+  bottom: -4.5px;
+  left: -4.5px;
+  width: 12px;
+  height: 12px;
+  content: '';
+  letter-spacing: 0;
+  border-radius: 50%;
+  background-color: $black;
+}
+
+.hard__one {
+  transform: scaleX(-1);
+}
+
+.hard__two .hard__item:nth-child(-n+4) {
+  display: none;
+}
+
+.hard__list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 24px 0;
+  gap: 48px;
+}
+
+.hard__item {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.hard__item-line {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 28px;
+  height: 3px;
+  margin-top: 22.5px;
+  background-color: $black;
+}
+
+.hard__item-category {
+  font-family: $nunito-medium;
+  font-size: 12px;
+  line-height: 48px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 156px;
+  height: 48px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $white;
+  border-radius: 6px;
+  background-color: $black;
+}
+
+.hard__block-item-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: 28px;
+  gap: 24px;
+}
+
+.hard__block-item-item {
+  font-family: $nunito-medium;
+  font-size: 12px;
+  line-height: 42px;
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 200px;
+  height: 48px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $black;
+  border: 3px solid $black;
+  border-radius: 6px;
+  background-color: $white;
+}
+
+.hard__reverse {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+.hard__block-item-item:nth-child(1)::before {
+  position: absolute;
+  top: 21px;
+  left: -31px;
+  width: 28px;
+  height: 3px;
+  content: '';
+
+  background-image: url('../img/skills/DashLine (1).svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hard__block-item-item:nth-child(2)::after {
+  position: absolute;
+  top: -27px;
+  left: -71.5px;
+  width: 68.5px;
+  height: 49.5px;
+  content: '';
+
+  background-image: url('../img/skills/DashLine (2).svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hard__block-item-item:nth-child(3)::after {
+  position: absolute;
+  top: -99px;
+  left: -110.5px;
+  width: 107.5px;
+  height: 121.5px;
+  content: '';
+
+  background-image: url('../img/skills/DashLine (3).svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hard__block-item-item:nth-child(4)::after {
+  position: absolute;
+  top: -171px;
+  left: -149.5px;
+  width: 146.5px;
+  height: 192.5px;
+  content: '';
+
+  background-image: url('../img/skills/DashLine (4).svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

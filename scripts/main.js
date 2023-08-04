@@ -1,6 +1,5 @@
 
 
-
 function openMobileMenu() {
     const mobileMenu = document.getElementById(""); // TODO: Find the element with ...
     if (mobileMenu.style.display === "block") {
