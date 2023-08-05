@@ -98,12 +98,13 @@ a, button {
   color: #141414;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
-  transition-property: opacity;
+  transition-property: all;
+  transform-origin: center;
 }
 
 button:hover, a:hover {
-  color: #141414;
-  opacity: 0.75;
+  color: rgba(20, 20, 20, 0.65);
+  transform: scale(0.95);
 }
 
 button:focus-visible, a:focus-visible {
@@ -600,6 +601,101 @@ button:focus-visible, a:focus-visible {
   background-image: url("../img/skills/DashLine (4).svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.projects {
+  padding: 80px 0;
+}
+
+.projects__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects__title {
+  margin-bottom: 40px;
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+  gap: 48px;
+}
+
+.projects__item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  gap: 16px;
+  max-width: 480px;
+}
+
+.projects__item-block {
+  width: 100%;
+  padding-top: calc(56.25% - 52px);
+  border-radius: 16px;
+  border: 3px solid #141414;
+  background-image: url("../img/projects/ExchangeRate.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.projects__block-links {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.projects__block-links [data-tooltip]::after {
+  right: -100%;
+  transform: translate(10%, 0%);
+}
+
+.project__block-img {
+  max-width: 28px;
+  max-height: 28px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects__item-text {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.projects__item-text p {
+  color: #141414;
+  font-family: "nunito-medium", sans-serif;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.projects__item-text b {
+  font-family: "nunito-bold", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.projects__item-text-title {
+  text-align: justify;
+  margin-bottom: 4px;
+}
+
+.projects__item-text-stack {
+  text-align: left;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -114,12 +114,13 @@ a, button {
   color: $black;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
-  transition-property: opacity;
+  transition-property: all;
+  transform-origin: center;
 }
 
 button:hover, a:hover {
-  color: $black;
-  opacity: 0.75;
+  color: rgb($black, 0.65);
+  transform: scale(0.95);
 }
 
 button:focus-visible, a:focus-visible {
