@@ -142,6 +142,15 @@ button:focus-visible, a:focus-visible {
   opacity: 1 !important;
 }
 
+.element-animation {
+  opacity: 0;
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: opacity 0.8s;
+}
+
 .header {
   position: fixed;
   z-index: 9999;
@@ -617,20 +626,25 @@ button:focus-visible, a:focus-visible {
   margin-bottom: 40px;
 }
 
-.projects__list {
+.projects__content {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex-grow: 0;
-  flex-shrink: 0;
-  gap: 48px;
+  margin: 0 auto;
+}
+
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 48px;
 }
 
 .projects__item {
   display: flex;
   flex-direction: column;
   flex-grow: 0;
-  flex-shrink: 0;
   gap: 16px;
   max-width: 480px;
 }
@@ -640,7 +654,7 @@ button:focus-visible, a:focus-visible {
   padding-top: calc(56.25% - 52px);
   border-radius: 16px;
   border: 3px solid #141414;
-  background-image: url("../img/projects/ExchangeRate.gif");
+  background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -654,13 +668,19 @@ button:focus-visible, a:focus-visible {
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
-  gap: 24px;
-  margin-bottom: 24px;
+  gap: 22px;
+  padding-bottom: 4%;
 }
 
 .projects__block-links [data-tooltip]::after {
   right: -100%;
   transform: translate(10%, 0%);
+}
+
+.project__block-link {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: #fff;
 }
 
 .project__block-img {

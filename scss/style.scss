@@ -157,3 +157,12 @@ button:focus-visible, a:focus-visible {
   top: 3em; /* Положение подсказки */
   opacity: 1 !important;
 }
+
+.element-animation {
+  opacity: 0;
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: opacity 0.8s;
+}
