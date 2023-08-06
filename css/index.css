@@ -673,8 +673,9 @@ button:focus-visible, a:focus-visible {
 }
 
 .projects__block-links [data-tooltip]::after {
-  right: -100%;
-  transform: translate(10%, 0%);
+  right: -200%;
+  left: -200%;
+  text-align: center;
 }
 
 .project__block-link {
