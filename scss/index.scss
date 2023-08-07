@@ -543,7 +543,6 @@
 
 .projects__block-links [data-tooltip]::after {
   right: -200%;
-  //transform: translate(10%, 0%)
   left: -200%;
   text-align: center;
 }
@@ -565,7 +564,6 @@
 .projects__item-text {
   width: 100%;
   flex-shrink: 0;
-  //padding: 0 4px;
 }
 
 .projects__item-text p {
@@ -590,4 +588,140 @@
   text-align: left;
 }
 
+.reviews {
+  padding: 80px 0;
+}
 
+.reviews__title {
+  margin-bottom: 40px;
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// SWIPER
+
+.swiper-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.swiper {
+  height: 336px;
+  width: 1100px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 !important;
+}
+
+.swiper-wrapper {
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: static !important;
+  max-width: 17px !important;
+  max-height: 28px !important;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/reviews/SliderArrow.svg');
+  z-index: 1000;
+  width: 100% !important;
+  height: 100% !important;
+  margin-top: 0 !important;
+}
+
+.swiper-button-prev {
+  margin-right: 32px;
+}
+
+.swiper-button-next {
+  transform: rotateY(180deg);
+}
+
+.reviews__card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 336px;
+  height: 336px;
+  border-radius: 16px;
+  background-color: $white;
+  border: 3px solid $black;
+}
+
+.reviews__card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reviews__card-header {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.reviews__card-header-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.reviews__card-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid $black;
+  background-color: $white;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.reviews__card-title {
+  height: 16px;
+  color: $blue;
+  font-family: $nunito-medium;
+  font-size: 16px;
+  line-height: 100%; /* 16px */
+  text-decoration-line: underline;
+}
+
+.reviews__card-title:hover {
+  color: rgb($blue, 0.65);
+  text-decoration-line: underline;
+  transform: scale(1);
+}
+
+.reviews__card-subtitle {
+  height: 16px;
+  width: 100%;
+  color: $black;
+  font-family: $nunito-medium;
+  font-size: 12px;
+  line-height: normal;
+}
+
+.reviews__card-text {
+  text-align: justify;
+  color: $black;
+  font-family: $nunito-regular;
+  font-size: 12px;
+  line-height: normal;
+  width: 100%;
+}

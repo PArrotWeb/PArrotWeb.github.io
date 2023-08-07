@@ -719,4 +719,137 @@ button:focus-visible, a:focus-visible {
   text-align: left;
 }
 
+.reviews {
+  padding: 80px 0;
+}
+
+.reviews__title {
+  margin-bottom: 40px;
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.swiper {
+  height: 336px;
+  width: 1100px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: static !important;
+  max-width: 17px !important;
+  max-height: 28px !important;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/reviews/SliderArrow.svg");
+  z-index: 1000;
+  width: 100% !important;
+  height: 100% !important;
+  margin-top: 0 !important;
+}
+
+.swiper-button-prev {
+  margin-right: 32px;
+}
+
+.swiper-button-next {
+  transform: rotateY(180deg);
+}
+
+.reviews__card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 336px;
+  height: 336px;
+  border-radius: 16px;
+  background-color: #fff;
+  border: 3px solid #141414;
+}
+
+.reviews__card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reviews__card-header {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.reviews__card-header-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.reviews__card-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #141414;
+  background-color: #fff;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.reviews__card-title {
+  height: 16px;
+  color: #0096DC;
+  font-family: "nunito-medium", sans-serif;
+  font-size: 16px;
+  line-height: 100%; /* 16px */
+  text-decoration-line: underline;
+}
+
+.reviews__card-title:hover {
+  color: rgba(0, 150, 220, 0.65);
+  text-decoration-line: underline;
+  transform: scale(1);
+}
+
+.reviews__card-subtitle {
+  height: 16px;
+  width: 100%;
+  color: #141414;
+  font-family: "nunito-medium", sans-serif;
+  font-size: 12px;
+  line-height: normal;
+}
+
+.reviews__card-text {
+  text-align: justify;
+  color: #141414;
+  font-family: "nunito-regular", sans-serif;
+  font-size: 12px;
+  line-height: normal;
+  width: 100%;
+}
+
 /*# sourceMappingURL=index.css.map */
