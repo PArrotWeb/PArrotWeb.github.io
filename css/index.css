@@ -200,7 +200,7 @@ button:focus-visible, a:focus-visible {
   left: 0;
   display: none;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   padding-top: 64px;
   background-color: #fff;
 }
@@ -230,14 +230,14 @@ button:focus-visible, a:focus-visible {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 150vh;
+  height: 150svh;
   content: "";
   background-color: #fff;
   background-image: url("../img/DotPattern.png");
   background-repeat: repeat;
   background-position: center;
   background-size: 24px;
-  clip-path: polygon(0 0, 100vw 0, 100vw 100vh, 0 150vh);
+  clip-path: polygon(0 0, 100vw 0, 100vw 100svh, 0 150svh);
 }
 
 .home {
@@ -281,7 +281,7 @@ button:focus-visible, a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100svh;
 }
 
 .home__title {
