@@ -2,21 +2,20 @@
 <html lang="en">
 <head>
 	<meta
-			charset="UTF-8" name="viewport"
-			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+			charset="UTF-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+			name="viewport"
 	/>
 	<title>PArrot Web</title>
-	<link rel="shortcut icon" href="img/ParrotWebLogo.svg" type="image/svg">
-	<!--	<link href="css/index.min.css" rel="stylesheet">-->
-	<link href="css/index.css" rel="stylesheet">
+	<link href="img/ParrotWebLogo.svg" rel="shortcut icon" type="image/svg">
+	<link href="css/index.min.css" rel="stylesheet">
 	<link href="css/swiper.min.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
 	<div class="container">
 		<div class="header__container">
-			<button class="header__open-btn" onclick="openMobileMenu()">
-				<img src="img/header/OpenMenuButton.svg" alt="" class="header__open-img">
+			<button class="header__open-btn" onclick="mobileMenu()">
+				<img alt="" class="header__open-img" src="img/header/OpenMenuButton.svg">
 			</button>
 			<nav class="header__nav">
 				<ul class="header__nav-list">
@@ -33,41 +32,62 @@
 						<a class="header__nav-item-link" href="#projects">Projects</a>
 					</li>
 					<li class="header__nav-item">
-						<a class="header__nav-item-link" href="#reviews">Client Reviews</a>
+						<a class="header__nav-item-link" href="#reviews">Reviews</a>
 					</li>
 				</ul>
 			</nav>
 			<div class="header__links">
 				<a
-						href="https://github.com/PArrotWeb" class="header__links-item" data-tooltip="Перейти в мой GitHub"
+						class="header__links-item" data-tooltip="Перейти в мой GitHub" href="https://github.com/PArrotWeb"
 						target="_blank"
 				>
-					<img src="/img/header/GitHub.svg" alt="" class="header__links-item-img">
+					<img alt="" class="header__links-item-img" src="/img/header/GitHub.svg">
 				</a>
 				<a
-						href="https://t.me/andreyas44" class="header__links-item" data-tooltip="Связаться в Telegram"
+						class="header__links-item" data-tooltip="Связаться в Telegram" href="https://t.me/andreyas44"
 						target="_blank"
 				>
-					<img src="/img/header/Telegram.svg" alt="" class="header__links-item-img">
+					<img alt="" class="header__links-item-img" src="/img/header/Telegram.svg">
 				</a>
 				<a
-						href="https://parrotweb.github.io/pdf/resume.pdf" class="header__links-item" data-tooltip="Открыть Резюме"
+						class="header__links-item" data-tooltip="Открыть Резюме" href="https://parrotweb.github.io/pdf/resume.pdf"
 						target="_blank"
 				>
-					<img src="/img/header/Resume.svg" alt="" class="header__links-item-img">
+					<img alt="" class="header__links-item-img" src="/img/header/Resume.svg">
 				</a>
 			</div>
 		</div>
 	</div>
 </header>
+<div class="header__burger-menu">
+	<div class="container">
+		<ul class="header__burger-list">
+			<li class="header__nav-item">
+				<a class="header__nav-item-link" href="#home" onclick="mobileMenu()">Home</a>
+			</li>
+			<li class="header__nav-item">
+				<a class="header__nav-item-link" href="#about" onclick="mobileMenu()">About Me</a>
+			</li>
+			<li class="header__nav-item">
+				<a class="header__nav-item-link" href="#skills" onclick="mobileMenu()">Skills</a>
+			</li>
+			<li class="header__nav-item">
+				<a class="header__nav-item-link" href="#projects" onclick="mobileMenu()">Projects</a>
+			</li>
+			<li class="header__nav-item">
+				<a class="header__nav-item-link" href="#reviews" onclick="mobileMenu()">Reviews</a>
+			</li>
+		</ul>
+	</div>
+</div>
 <main class="main">
 	<section class="home" id="home">
 		<div class="container">
 			<div class="home__container">
 				<h1 class="home__title">
-					<highlight>
+					<span class="highlight">
 						I'm,
-					</highlight>
+					</span>
 					<br>
 					.NET/WEB-DEVELOPER
 				</h1>
@@ -78,10 +98,7 @@
 		<div class="container">
 			<div class="about__container">
 				<h2 class="about__title">
-					<highlight>A</highlight>
-					bout
-					<highlight>M</highlight>
-					e
+					<span class="highlight">A</span>bout <span class="highlight">M</span>e
 				</h2>
 				<div class="about__block">
 					<p class="about__text">
@@ -104,10 +121,7 @@
 		<div class="container">
 			<div class="soft__container">
 				<h2 class="soft__title">
-					<highlight>S</highlight>
-					oft
-					<highlight> S</highlight>
-					kills
+					<span class="highlight">S</span>oft <span class="highlight">S</span>kills
 				</h2>
 				<div class="soft__block">
 					<div class="soft__vertical"></div>
@@ -193,10 +207,7 @@
 		<div class="container">
 			<div class="hard__container">
 				<h2 class="hard__title">
-					<highlight>H</highlight>
-					ard
-					<highlight>S</highlight>
-					kills
+					<span class="highlight">H</span>ard <span class="highlight">S</span>kills
 				</h2>
 				<div class="hard__block">
 					<div class="hard__one">
@@ -436,8 +447,7 @@
 		<div class="container">
 			<div class="projects__container">
 				<h2 class="projects__title">
-					<highlight>P</highlight>
-					rojects
+					<span class="highlight">P</span>rojects
 				</h2>
 				<div class="projects__content">
 					<div class="projects__list">
@@ -445,16 +455,17 @@
 							<div class="projects__item-block" style="background-image: url('img/projects/ExchangeRate.gif')">
 								<div class="projects__block-links">
 									<a
-											target="_blank" href="http://217.71.129.139:5021/" class="project__block-link"
-											data-tooltip="Перейти на сайт"
+											class="project__block-link" data-tooltip="Перейти на сайт" href="http://217.71.129.139:5021/"
+											target="_blank"
 									>
-										<img src="/img/projects/OpenIcon.svg" alt="" class="project__block-img">
+										<img alt="" class="project__block-img" src="/img/projects/OpenIcon.svg">
 									</a>
 									<a
-											target="_blank" href="https://github.com/PArrotWeb/ExchangeRate" class="project__block-link"
-											data-tooltip="Открыть в GitHub"
+											class="project__block-link" data-tooltip="Открыть в GitHub"
+											href="https://github.com/PArrotWeb/ExchangeRate"
+											target="_blank"
 									>
-										<img src="/img/projects/GitHubIcon.svg" alt="" class="project__block-img">
+										<img alt="" class="project__block-img" src="/img/projects/GitHubIcon.svg">
 									</a>
 								</div>
 							</div>
@@ -479,16 +490,17 @@
 							<div class="projects__item-block" style="background-image: url('img/projects/CoffeeShop.gif')">
 								<div class="projects__block-links">
 									<a
-											target="_blank" href="http://217.71.129.139:4785/" class="project__block-link"
-											data-tooltip="Перейти на сайт"
+											class="project__block-link" data-tooltip="Перейти на сайт" href="http://217.71.129.139:4785/"
+											target="_blank"
 									>
-										<img src="/img/projects/OpenIcon.svg" alt="" class="project__block-img">
+										<img alt="" class="project__block-img" src="/img/projects/OpenIcon.svg">
 									</a>
 									<a
-											target="_blank" href="https://github.com/PArrotWeb/CoffeeShop" class="project__block-link"
-											data-tooltip="Открыть в GitHub"
+											class="project__block-link" data-tooltip="Открыть в GitHub"
+											href="https://github.com/PArrotWeb/CoffeeShop"
+											target="_blank"
 									>
-										<img src="/img/projects/GitHubIcon.svg" alt="" class="project__block-img">
+										<img alt="" class="project__block-img" src="/img/projects/GitHubIcon.svg">
 									</a>
 								</div>
 							</div>
@@ -513,10 +525,11 @@
 							<div class="projects__item-block" style="background-image: url('img/projects/AnimalShelter.gif')">
 								<div class="projects__block-links">
 									<a
-											target="_blank" href="https://github.com/PArrotWeb/AnimalShelter" class="project__block-link"
-											data-tooltip="Открыть в GitHub"
+											class="project__block-link" data-tooltip="Открыть в GitHub"
+											href="https://github.com/PArrotWeb/AnimalShelter"
+											target="_blank"
 									>
-										<img src="/img/projects/GitHubIcon.svg" alt="" class="project__block-img">
+										<img alt="" class="project__block-img" src="/img/projects/GitHubIcon.svg">
 									</a>
 								</div>
 							</div>
@@ -540,10 +553,11 @@
 							<div class="projects__item-block" style="background-image: url('img/projects/Simulator.gif')">
 								<div class="projects__block-links">
 									<a
-											target="_blank" href="https://github.com/AndreyAs44/EnginesSimulator" class="project__block-link"
-											data-tooltip="Открыть в GitHub"
+											class="project__block-link" data-tooltip="Открыть в GitHub"
+											href="https://github.com/AndreyAs44/EnginesSimulator"
+											target="_blank"
 									>
-										<img src="/img/projects/GitHubIcon.svg" alt="" class="project__block-img">
+										<img alt="" class="project__block-img" src="/img/projects/GitHubIcon.svg">
 									</a>
 								</div>
 							</div>
@@ -565,12 +579,12 @@
 							<div class="projects__item-block" style="background-image: url('img/projects/RoadGame.gif')">
 								<div class="projects__block-links">
 									<a
-											target="_blank"
-											href="https://play.google.com/store/apps/details?id=com.motorways.hopper.pickup.wifi&hl=ru&gl=US"
 											class="project__block-link"
 											data-tooltip="Открыть в PlayMarket"
+											href="https://play.google.com/store/apps/details?id=com.motorways.hopper.pickup.wifi&hl=ru&gl=US"
+											target="_blank"
 									>
-										<img src="/img/projects/PlayMarketIcon.svg" alt="" class="project__block-img">
+										<img alt="" class="project__block-img" src="/img/projects/PlayMarketIcon.svg">
 									</a>
 								</div>
 							</div>
@@ -604,10 +618,7 @@
 		<div class="container">
 			<div class="reviews__container">
 				<h2 class="reviews__title">
-					<highlight>C</highlight>
-					lient
-					<highlight>R</highlight>
-					eviews
+					<span class="highlight">R</span>eviews
 				</h2>
 				<div class="swiper-container">
 					<div class="swiper-button-prev"></div>
@@ -619,9 +630,9 @@
 								<div class="reviews__card">
 									<div class="reviews__card-content">
 										<div class="reviews__card-header">
-											<img src="img/reviews/SofiyaFox.jpg" alt="" class="reviews__card-img">
+											<img alt="" class="reviews__card-img" src="img/reviews/SofiyaFox.jpg">
 											<div class="reviews__card-header-titles">
-												<a href="https://kwork.ru/user/parrots" class="reviews__card-title">
+												<a class="reviews__card-title" href="https://kwork.ru/user/parrots" target="_blank">
 													Софья
 												</a>
 												<div class="reviews__card-subtitle">
@@ -642,9 +653,9 @@
 								<div class="reviews__card">
 									<div class="reviews__card-content">
 										<div class="reviews__card-header">
-											<img src="img/reviews/EllecotR.jpg" alt="" class="reviews__card-img">
+											<img alt="" class="reviews__card-img" src="img/reviews/EllecotR.jpg">
 											<div class="reviews__card-header-titles">
-												<a href="https://kwork.ru/user/parrots" class="reviews__card-title">
+												<a class="reviews__card-title" href="https://kwork.ru/user/parrots" target="_blank">
 													Николай
 												</a>
 												<div class="reviews__card-subtitle">
@@ -669,9 +680,9 @@
 								<div class="reviews__card">
 									<div class="reviews__card-content">
 										<div class="reviews__card-header">
-											<img src="img/reviews/Dberkheev1.jpg" alt="" class="reviews__card-img">
+											<img alt="" class="reviews__card-img" src="img/reviews/Dberkheev1.jpg">
 											<div class="reviews__card-header-titles">
-												<a href="https://kwork.ru/user/parrots" class="reviews__card-title">
+												<a class="reviews__card-title" href="https://kwork.ru/user/parrots" target="_blank">
 													Дамир
 												</a>
 												<div class="reviews__card-subtitle">
@@ -691,9 +702,9 @@
 								<div class="reviews__card">
 									<div class="reviews__card-content">
 										<div class="reviews__card-header">
-											<img src="img/reviews/sheroz4eg2.jpg" alt="" class="reviews__card-img">
+											<img alt="" class="reviews__card-img" src="img/reviews/sheroz4eg2.jpg">
 											<div class="reviews__card-header-titles">
-												<a href="https://kwork.ru/user/parrots" class="reviews__card-title">
+												<a class="reviews__card-title" href="https://kwork.ru/user/parrots" target="_blank">
 													Айзенберг
 												</a>
 												<div class="reviews__card-subtitle">
@@ -711,9 +722,9 @@
 								<div class="reviews__card">
 									<div class="reviews__card-content">
 										<div class="reviews__card-header">
-											<img src="img/reviews/Ksu_Kovenkova.jpg" alt="" class="reviews__card-img">
+											<img alt="" class="reviews__card-img" src="img/reviews/Ksu_Kovenkova.jpg">
 											<div class="reviews__card-header-titles">
-												<a href="https://kwork.ru/user/parrots" class="reviews__card-title">
+												<a class="reviews__card-title" href="https://kwork.ru/user/parrots" target="_blank">
 													Оксана
 												</a>
 												<div class="reviews__card-subtitle">
@@ -729,6 +740,7 @@
 								</div>
 							</div>
 						</div>
+						<div class="swiper-pagination"></div>
 					</div>
 					<div class="swiper-button-next"></div>
 				</div>
@@ -740,17 +752,21 @@
 	<div class="container">
 		<div class="footer__container">
 			<div class="footer__author">
-				Сергеев Андрей Константинович
+				Сергеев Андрей
 			</div>
 			<div class="footer__contacts">
-				<a href="tel:+79134564614" class="footer__contacts-link">
-					<img src="img/footer/PhoneIcon.png" alt="" class="footer__contacts-img">
+				<div class="footer__contacts-item">
+					<a class="footer__contacts-link" href="tel:+79134564614">
+						<img alt="" class="footer__contacts-img" src="img/footer/PhoneIcon.png">
+					</a>
 					<p class="footer__contacts-text">+7 (913) 456-46-14</p>
-				</a>
-				<a href="mailto:as111004andr@gmail.com" class="footer__contacts-link">
-					<img src="img/footer/MailIcon.png" alt="" class="footer__contacts-img">
+				</div>
+				<div class="footer__contacts-item">
+					<a class="footer__contacts-link" href="mailto:as111004andr@gmail.com">
+						<img alt="" class="footer__contacts-img" src="img/footer/MailIcon.png">
+					</a>
 					<p class="footer__contacts-text"> as111004andr@gmail.com</p>
-				</a>
+				</div>
 			</div>
 			<div class="footer__date">
 				Август, 2023
@@ -771,6 +787,40 @@
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: false,
+			enabled: false,
+		},
+		breakpoints: {
+			360: {
+				slidesPerView: 1,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: false,
+					enabled: true,
+				},
+			},
+			800: {
+				slidesPerView: 2,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: false,
+					enabled: false,
+				},
+			},
+			1200: {
+				slidesPerView: 3,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: false,
+					enabled: false,
+				},
+			},
+		},
+	});
+	window.addEventListener('resize', (e) => {
+		swiper.update();
 	});
 </script>
 <script src="scripts/main.min.js"></script>
