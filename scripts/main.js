@@ -1,12 +1,15 @@
 function mobileMenu() {
     const mobileMenu = document.querySelector(".header__burger-menu"); // TODO: Find the element with ...
     const openImage = document.querySelector(".header__open-img"); // TODO: Find the element with ...
+    const body = document.querySelector("body");
     if (mobileMenu.style.display === "block") {
         mobileMenu.style.display = "none";
         openImage.setAttribute("src", "../img/header/OpenMenuButton.svg");
+        body.style.overflowY = "auto";
     } else {
         mobileMenu.style.display = "block";
         openImage.setAttribute("src", "../img/header/CloseMenuButton.svg");
+        body.style.overflowY = "hidden";
     }
 }
 
