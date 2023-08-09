@@ -39,7 +39,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   color: #141414;
 }
 
@@ -967,9 +967,11 @@ a.reviews__card-header-titles {
 .footer__contacts-text {
   font-family: "nunito-medium", sans-serif;
   font-size: 16px;
-  color: #fff;
+  color: #fff !important;
+  z-index: 100 !important;
   flex-grow: 0;
   flex-shrink: 0;
+  height: 21.6px;
 }
 
 .footer__date {
