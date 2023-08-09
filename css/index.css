@@ -809,6 +809,15 @@ button:focus-visible, a:focus-visible {
   transform: rotateY(180deg);
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #141414 !important;
+}
+
+.swiper-pagination {
+  width: 336px !important;
+  height: 20px !important;
+}
+
 .reviews__card {
   display: flex;
   align-items: center;
@@ -938,18 +947,29 @@ a.reviews__card-header-titles {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.footer__contacts-link {
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .footer__contacts-img {
   width: auto;
   height: auto;
   max-height: 16px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .footer__contacts-text {
   font-family: "nunito-medium", sans-serif;
   font-size: 16px;
   color: #fff;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .footer__date {
@@ -1007,12 +1027,6 @@ a.reviews__card-header-titles {
   }
   .swiper {
     width: 360px;
-  }
-  .swiper-pagination-bullet-active {
-    background-color: #141414 !important;
-  }
-  .swiper-pagination {
-    width: 336px !important;
   }
   .footer__container {
     align-items: center;
