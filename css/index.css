@@ -974,6 +974,10 @@ a.reviews__card-header-titles {
   height: 21.6px;
 }
 
+.footer__contacts-text a {
+  color: #fff !important;
+}
+
 .footer__date {
   flex-grow: 0;
   flex-shrink: 0;
